@@ -1,6 +1,6 @@
 # \<chemical-element-visualisation\>
 
-[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://beta.webcomponents.org/element/florianfe/bouncing-spinner)
+[![Published on webcomponents.org](https://www.webcomponents.org/element/FlorianFe/chemical-element-visualisation)
 
 A Web Component for visualizing an chemical element built with Polymer 2
 
