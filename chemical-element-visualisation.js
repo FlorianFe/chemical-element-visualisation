@@ -10,7 +10,7 @@ class ChemicalElementVisualisation extends Polymer.Element
   {
     return {
       symbol: String,
-      elements:
+      _elements:
       {
         type: Object,
         value:
@@ -2066,12 +2066,7 @@ class ChemicalElementVisualisation extends Polymer.Element
           }
         }
       },
-      element: Object,
-      size:
-      {
-        type: Number,
-        value: 500
-      }
+      _element: Object
     }
   }
 
@@ -2079,7 +2074,7 @@ class ChemicalElementVisualisation extends Polymer.Element
   {
     return [
       '_onSymbolChange(symbol)',
-      '_onElementChange(element)'
+      '_onElementChange(_element)'
   ];
   }
 
@@ -2090,23 +2085,24 @@ class ChemicalElementVisualisation extends Polymer.Element
 
   _onSymbolChange()
   {
-    this.element = this.elements[this.symbol];
+    this._element = this._elements[this.symbol];
   }
 
   _onElementChange()
   {
+    const SIZE = 500;
 
     let dynamicallyAddedElements = this.shadowRoot.querySelectorAll(".added-dynamically");
     dynamicallyAddedElements.forEach((element) => element.remove() );
 
-    if(this.element)
+    if(this._element)
     {
-      let electronConfiguration = this.element["electron-configuration"];
+      let electronConfiguration = this._element["electron-configuration"];
       let electronGroup = this.$["electron-group"];
       let ringGroup = this.$["ring-group"];
 
-      let minimumRadius = this.size / 6;
-      let maximumRadius = this.size / 2;
+      let minimumRadius = SIZE / 6;
+      let maximumRadius = SIZE / 2;
 
       for(let i=0; i < electronConfiguration.length; i++)
       {
@@ -2114,8 +2110,8 @@ class ChemicalElementVisualisation extends Polymer.Element
 
         let radius = minimumRadius + (i+1) * (maximumRadius - minimumRadius) / (electronConfiguration.length + 1);
 
-        ring.setAttribute("cx", this.size / 2);
-        ring.setAttribute("cy", this.size / 2);
+        ring.setAttribute("cx", SIZE / 2);
+        ring.setAttribute("cy", SIZE / 2);
         ring.setAttribute("r", radius);
         ring.classList.add("ring");
         ring.classList.add("added-dynamically");
@@ -2149,7 +2145,7 @@ class ChemicalElementVisualisation extends Polymer.Element
 
           let cx = (Math.sin((2 * Math.PI) * (j / totalValenceElectrons) + phaseShift) * ringRadius);
           let cy = (Math.cos((2 * Math.PI) * (j / totalValenceElectrons) + phaseShift) * ringRadius);
-          let radius = this.size / 50;
+          let radius = SIZE / 50;
 
           electron.setAttribute("cx", cx);
           electron.setAttribute("cy", cy);
@@ -2160,7 +2156,7 @@ class ChemicalElementVisualisation extends Polymer.Element
 
           electronBackground.setAttribute("cx", cx);
           electronBackground.setAttribute("cy", cy);
-          electronBackground.setAttribute("r", radius + this.size / 75);
+          electronBackground.setAttribute("r", radius + SIZE / 75);
           electronBackground.classList.add("electron-background");
           electronBackground.classList.add("added-dynamically");
 
@@ -2208,8 +2204,8 @@ class ChemicalElementVisualisation extends Polymer.Element
 
       electronGroup.animate(
       [
-        { "transform" : "translate(" + (this.size / 2) + "px, " + (this.size / 2) + "px) rotate(0deg)"},
-        { "transform" : "translate(" + (this.size / 2) + "px, " + (this.size / 2) + "px) rotate(360deg)"}
+        { "transform" : "translate(" + (SIZE / 2) + "px, " + (SIZE / 2) + "px) rotate(0deg)"},
+        { "transform" : "translate(" + (SIZE / 2) + "px, " + (SIZE / 2) + "px) rotate(360deg)"}
       ],
       {
         duration: 10000,
@@ -2218,7 +2214,7 @@ class ChemicalElementVisualisation extends Polymer.Element
     }
   }
 
-  divide(divident, divisor)
+  _divide(divident, divisor)
   {
     return (divident / divisor);
   }

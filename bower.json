@@ -1,16 +1,14 @@
 {
   "name": "chemical-element-visualisation",
-  "main": "chemical-element-visualisation.js",
+  "main": "chemical-element-visualisation.html",
   "authors": [
     "Florian Fechner"
   ],
   "description": "A Web Component for visualizing an chemical element",
   "keywords": [
-    "web",
-    "component",
+    "web-components",
     "chemistry",
-    "periodic",
-    "table"
+    "periodic-table"
   ],
   "license": "MIT",
   "homepage": "",

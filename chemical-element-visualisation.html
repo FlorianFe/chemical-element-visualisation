@@ -1,25 +1,12 @@
-<!-- Imports Polymer -->
 <link rel="import" href="../polymer/polymer.html">
 
-
 <!--
-Material design: [Chips](https://material.io/guidelines/components/chips.html#chips-specs)
-`paper-chip`
-Paper-chip's represent complex entities in small blocks, such as a contact.
-### Styling
-The following custom properties and mixins are available for styling:
-Custom property | Description | Default
-----------------|-------------|----------
-`--paper-chip-label-color` | The paper-chip label-color | `rgba(0, 0, 0, 0.6)`
-`--paper-chip-background-color` | The paper-chip background-color | `#e4e4e4`
-`--paper-chip-avatar-background-color` | The paper-chip avatar background-color | `#757575`
-`--paper-chip-avatar-font-color` | The paper-chip avatar font and icon color | `#ffffff`
-`--paper-chip-close-color` | The paper-chip close icon color | `#a6a6a6`
-@element chemical-element-visualisation
+`chemical-element-visualisation`
+A Visualisation of chemical Elements built with Polymer 2
+
 @demo demo/index.html
 -->
 
-<!-- Defines element markup -->
 <dom-module id="chemical-element-visualisation">
 
   <template>
@@ -63,7 +50,7 @@ Custom property | Description | Default
     </custom-style>
 
     <svg version="1.1" viewBox="0 0 500 500">
-      <circle cx$="[[divide(size, 2)]]" cy$="[[divide(size, 2)]]" r$="[[divide(size, 10)]]" class$="[[element.group]]"/>
+      <circle cx$="[[_divide(500, 2)]]" cy$="[[_divide(500, 2)]]" r$="[[_divide(500, 10)]]" class$="[[_element.group]]"/>
 
       <g id="ring-group">
 
@@ -75,6 +62,5 @@ Custom property | Description | Default
     </svg>
   </template>
 
-  <!-- Loads JavaScript -->
   <script src="chemical-element-visualisation.js"></script>
 </dom-module>
