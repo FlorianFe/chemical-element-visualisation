@@ -1,4 +1,6 @@
 <link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../paper-tooltip/paper-tooltip.html">
+<link rel="import" href="../neon-animation/web-animations.html">
 
 <!--
 `chemical-element-visualisation`
@@ -48,18 +50,15 @@ A Visualisation of chemical Elements built with Polymer 2
 
       </style>
     </custom-style>
-
-    <svg version="1.1" viewBox="0 0 500 500">
+    <svg id='element' version="1.1" viewBox="0 0 500 500">
+      <title>An animation of the chemical element [[_element.name]].</title>
       <circle cx$="[[_divide(500, 2)]]" cy$="[[_divide(500, 2)]]" r$="[[_divide(500, 10)]]" class$="[[_element.group]]"/>
-
-      <g id="ring-group">
-
-      </g>
-
-      <g id="electron-group">
-
-      </g>
+      <g id="ring-group"></g>
+      <g id="electron-group"></g>
     </svg>
+    <paper-tooltip for="element" position="bottom" animation-delay="0">
+      [[_element.name]]
+    </paper-tooltip>
   </template>
 
   <script src="chemical-element-visualisation.js"></script>
