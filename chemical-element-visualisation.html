@@ -56,9 +56,13 @@ A Visualisation of chemical Elements built with Polymer 2
       <g id="ring-group"></g>
       <g id="electron-group"></g>
     </svg>
-    <paper-tooltip for="element" position="bottom" animation-delay="0">
-      [[_element.name]]
-    </paper-tooltip>
+    <dom-if if="[[tooltip]]">
+      <template>
+        <paper-tooltip for="element" position="bottom" animation-delay="0">
+          [[_element.name]]
+        </paper-tooltip>
+      </template>
+    </dom-if>
   </template>
 
   <script src="chemical-element-visualisation.js"></script>

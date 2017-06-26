@@ -10,6 +10,11 @@ class ChemicalElementVisualisation extends Polymer.Element
   {
     return {
       symbol: String,
+      tooltip:
+      {
+        type: Boolean,
+        value: false
+      },
       _elements:
       {
         type: Object,
