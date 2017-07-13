@@ -16,6 +16,26 @@ A Visualisation of chemical Elements built with Polymer 2
     <custom-style>
       <style>
 
+        :host
+        {
+          width: var(--chemical-element-visualisation-size, 100%);
+          display: inline-block;
+        }
+
+        #element-container
+        {
+          position: relative;
+          width: var(--chemical-element-visualisation-size, 100%);
+          height: auto;
+        }
+
+        #element-container:before
+        {
+        	content: "";
+        	display: block;
+        	padding-top: 100%; /* 1:1 Aspect */
+        }
+
         .alkali-metal           { fill: var(--alkali-metal-primary-color, #ff8a65);           }
         .alkaline-earth-metal   { fill: var(--alkaline-earth-metal-primary-color, #ffb74d);   }
         .transition-metal       { fill: var(--transition-metal-primary-color, #ffd54f);       }
@@ -40,7 +60,17 @@ A Visualisation of chemical Elements built with Polymer 2
 
         .electron-background
         {
-          fill: #fff;
+          fill: var(--chemical-element-visualisation-background-color, #fff);
+        }
+
+        #element
+        {
+          background-color: var(--chemical-element-visualisation-background-color, #fff);
+          position: absolute;
+        	top: 0;
+        	left: 0;
+        	bottom: 0;
+        	right: 0;
         }
 
         .s-group-electron { fill: var(--s-group-electron-color, #2196f3); }
@@ -50,12 +80,14 @@ A Visualisation of chemical Elements built with Polymer 2
 
       </style>
     </custom-style>
-    <svg id='element' version="1.1" viewBox="0 0 500 500">
-      <title>An animation of the chemical element [[_element.name]].</title>
-      <circle cx$="[[_divide(500, 2)]]" cy$="[[_divide(500, 2)]]" r$="[[_divide(500, 10)]]" class$="[[_element.group]]"/>
-      <g id="ring-group"></g>
-      <g id="electron-group"></g>
-    </svg>
+    <div id="element-container">
+      <svg id='element' version="1.1" viewBox="0 0 500 500">
+        <title>An animation of the chemical element [[_element.name]].</title>
+        <circle cx$="[[_divide(500, 2)]]" cy$="[[_divide(500, 2)]]" r$="[[_divide(500, 10)]]" class$="[[_element.group]]"/>
+        <g id="ring-group"></g>
+        <g id="electron-group"></g>
+      </svg>
+    </div>
     <dom-if if="[[tooltip]]">
       <template>
         <paper-tooltip for="element" position="bottom" animation-delay="0">
