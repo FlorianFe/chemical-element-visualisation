@@ -1,7 +1,7 @@
 {
   "name": "chemical-element-visualisation",
   "description": "A Web Component for visualizing an chemical element",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "chemical-element-visualisation.js",
   "dependencies": {
     "lit-element": "^2.1.0"
