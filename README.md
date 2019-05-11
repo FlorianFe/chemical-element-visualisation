@@ -4,6 +4,11 @@
 
 A Web Component for visualizing an chemical element built with Polymer 2. It's part of the [Elements](https://github.com/FlorianFe/Elements) Electron Application. You can find a full list of element symbols on [Wikipedia](https://simple.wikipedia.org/wiki/List_of_elements_by_symbol). 
 
+## Preview
+
+![Screenshot](https://florianfe.github.io/screenshots/chemical-element-visualisation/screenshot-1.png)
+
+
 ## Installation
 
 ```
