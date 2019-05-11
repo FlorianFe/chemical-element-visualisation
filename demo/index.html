@@ -1,53 +1,41 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <title>chemical-element-visualisation demo</title>
 
-  <title>Chemical Element Visualisation demo</title>
+    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
+    <script type="module">
+      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
+      import '@polymer/iron-demo-helpers/demo-snippet';
 
-  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+      import '@polymer/paper-input/paper-input';
+    </script>
 
-  <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-  <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-  <link rel="import" href="../../paper-input/paper-input.html">
+    <script type="module" src="../chemical-element-visualisation.js"></script>
 
-  <link rel="import" href="../chemical-element-visualisation.html">
-
-  <style is="custom-style" include="demo-pages-shared-styles">
-  </style>
-</head>
-
-<body unresolved>
-
-  <style>
-
-  body
-  {
-    font-family: sans-serif;
-  }
-
-  </style>
-
-  <div class="vertical-section-container centered">
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+      </style>
+    </custom-style>
+  </head>
+  <body>
     <h3>Basic Demo</h3>
     <demo-snippet>
       <template>
         <style>
-
           .container
           {
             display: flex;
           }
-
           .item
           {
             flex: 1;
             padding: 10px;
           }
-
         </style>
 
         <div class="container">
@@ -67,50 +55,6 @@
             <h4>Magnesium</h4>
             <chemical-element-visualisation
               symbol="mg"
-            ></chemical-element-visualisation>
-          </div>
-        </div>
-      </template>
-    </demo-snippet>
-
-    <h3>Tooltips</h3>
-    <demo-snippet>
-      <template>
-        <style>
-
-          .container
-          {
-            display: flex;
-          }
-
-          .item
-          {
-            flex: 1;
-            padding: 10px;
-          }
-
-        </style>
-
-        <div class="container">
-          <div class="item">
-            <h4>Hydrogen</h4>
-            <chemical-element-visualisation
-              symbol="h"
-              tooltip="true"
-            ></chemical-element-visualisation>
-          </div>
-          <div class="item">
-            <h4>Helium</h4>
-            <chemical-element-visualisation
-              symbol="he"
-              tooltip="true"
-            ></chemical-element-visualisation>
-          </div>
-          <div class="item">
-            <h4>Magnesium</h4>
-            <chemical-element-visualisation
-              symbol="mg"
-              tooltip="true"
             ></chemical-element-visualisation>
           </div>
         </div>
@@ -122,18 +66,15 @@
       <template>
         <custom-style>
           <style>
-
             .container
             {
               display: flex;
             }
-
             .item
             {
               flex: 1;
               padding: 10px;
             }
-
             .element-type-color-changed
             {
               --alkali-metal-primary-color: #000;
@@ -147,7 +88,6 @@
               --lanthanide-primary-color: #080;
               --actinide-primary-color: #008;
             }
-
           </style>
         </custom-style>
 
@@ -182,18 +122,15 @@
       <template>
         <custom-style>
           <style>
-
             .container
             {
               display: flex;
             }
-
             .item
             {
               flex: 1;
               padding: 10px;
             }
-
             .electron-group-color-changed
             {
               --s-group-electron-color: #f00;
@@ -201,7 +138,6 @@
               --d-group-electron-color: #f0f;
               --f-group-electron-color: #ff0;
             }
-
           </style>
         </custom-style>
 
@@ -236,18 +172,15 @@
       <template>
         <custom-style>
           <style>
-
             .container
             {
               display: flex;
             }
-
             .item
             {
               flex: 1;
               padding: 10px;
             }
-
           </style>
         </custom-style>
 
@@ -270,8 +203,5 @@
 
       </template>
     </demo-snippet>
-
-  </div>
-</body>
-
+  </body>
 </html>

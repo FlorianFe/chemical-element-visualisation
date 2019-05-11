@@ -1,4 +1,4 @@
-{
+export default {
   "h":
   {
     "symbol": "H",
@@ -284,7 +284,7 @@
   "k":
   {
     "symbol": "K",
-    "name": "Potasium",
+    "name": "Potassium",
     "group": "alkali-metal",
     "atomic-number": 19,
     "electron-configuration": [
@@ -1070,7 +1070,7 @@
   "pt":
   {
     "symbol": "Pt",
-    "name": "Platinium",
+    "name": "Platinum",
     "group": "transition-metal",
     "atomic-number": 78,
     "electron-configuration": [
@@ -1279,6 +1279,8 @@
     "melting-point": 973,
     "boiling-point": 2010
   },
+
+/*
   "rf":
   {
     "symbol": "Rf",
@@ -1459,7 +1461,7 @@
     "melting-point": "?",
     "boiling-point": "?"
   },
-
+*/
 
   "la":
   {

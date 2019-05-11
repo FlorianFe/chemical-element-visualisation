@@ -1,0 +1,17 @@
+{
+  "name": "chemical-element-visualisation",
+  "description": "A Web Component for visualizing an chemical element",
+  "main": "chemical-element-visualisation.js",
+  "dependencies": {
+    "lit-element": "^2.1.0"
+  },
+  "devDependencies": {
+    "@polymer/iron-demo-helpers": "^3.1.0",
+    "@polymer/paper-input": "^3.0.2",
+    "@polymer/test-fixture": "^4.0.2",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "wct-mocha": "^1.0.0"
+  }
+}
