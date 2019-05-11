@@ -1,21 +1,26 @@
 # \<chemical-element-visualisation\>
 
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/FlorianFe/chemical-element-visualisation)
 
+A Web Component for visualizing an chemical element built with Polymer 2. It's part of the [Elements](https://github.com/FlorianFe/Elements) Electron Application. You can find a full list of element symbols on [Wikipedia](https://simple.wikipedia.org/wiki/List_of_elements_by_symbol). 
 
-## Install the Polymer-CLI
-
-First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polymer-cli) and npm (packaged with [Node.js](https://nodejs.org)) installed. Run `npm install` to install your element's dependencies, then run `polymer serve` to serve your element locally.
-
-## Viewing Your Element
+## Installation
 
 ```
-$ polymer serve
+npm install --save chemical-element-visualisation
 ```
 
-## Running Tests
+## Usage
 
 ```
-$ polymer test
+<html>
+  <head>
+    <script type="module">
+      import 'chemical-element-visualisation/chemical-element-visualisation.js';
+    </script>
+  </head>
+  <body>
+    <chemical-element-visualisation symbol="he"></chemical-element-visualisation>
+  </body>
+</html>
 ```
-
-Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
