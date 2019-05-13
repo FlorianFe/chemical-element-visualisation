@@ -1,8 +1,13 @@
 {
   "name": "chemical-element-visualisation",
   "description": "A Web Component for visualizing an chemical element",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "main": "chemical-element-visualisation.js",
+  "repository": 
+  {
+    "type": "git",
+    "url": "https://github.com/florianfe/chemical-element-visualisation"
+  },
   "dependencies": {
     "lit-element": "^2.1.0"
   },
@@ -14,5 +19,10 @@
     "chai": "^4.2.0",
     "mocha": "^6.1.4",
     "wct-mocha": "^1.0.0"
-  }
+  },
+  "keywords": 
+  [
+    "web-components",
+    "html"
+  ]
 }
