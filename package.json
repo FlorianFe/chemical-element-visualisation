@@ -1,12 +1,14 @@
 {
   "name": "chemical-element-visualisation",
   "description": "A Web Component for visualizing an chemical element",
-  "version": "2.0.2",
+  "version": "2.0.3",
+  "author": "Florian Fechner",
+  "license": "MIT",
   "main": "chemical-element-visualisation.js",
   "repository": 
   {
     "type": "git",
-    "url": "https://github.com/florianfe/chemical-element-visualisation"
+    "url": "https://github.com/florianfe/chemical-element-visualisation.git"
   },
   "dependencies": {
     "lit-element": "^2.1.0"
@@ -23,6 +25,7 @@
   "keywords": 
   [
     "web-components",
+    "lit-element",
     "html"
   ]
 }
