@@ -4,18 +4,18 @@
 
 A Web Component for visualizing an chemical element built with LitElement. It's part of the [Elements](https://github.com/FlorianFe/Elements) Electron Application. You can find a full list of element symbols on [Wikipedia](https://simple.wikipedia.org/wiki/List_of_elements_by_symbol). 
 
-## Preview
+## 🖼 Preview
 
 ![Screenshot](https://florianfe.github.io/screenshots/chemical-element-visualisation/screenshot-1.png)
 
 
-## Installation
+## 💾 Installation
 
 ```
 npm install --save chemical-element-visualisation
 ```
 
-## Usage
+## 🚀 Usage
 
 ```
 <html>
@@ -29,3 +29,6 @@ npm install --save chemical-element-visualisation
   </body>
 </html>
 ```
+
+## 📖 License
+[MIT License](https://github.com/FlorianFe/chemical-element-visualisation/blob/master/LICENSE.txt)
