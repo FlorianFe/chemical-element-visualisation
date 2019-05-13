@@ -31,4 +31,4 @@ npm install --save chemical-element-visualisation
 ```
 
 ## 📖 License
-[MIT License](https://mit-license.org/)
+[MIT License](https://github.com/FlorianFe/chemical-element-visualisation/blob/master/LICENSE.txt)
